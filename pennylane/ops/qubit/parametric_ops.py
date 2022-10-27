@@ -3677,7 +3677,7 @@ class Ctrl_MULT_MOD(Operation):
                 len(wires_a) - len(m_2_to_power_i_mod_N)
             )
 
-            # cycle for Toffoli gates before ADDER_MOD to put m*2^i to wires_a if control_wire == 1
+            #cycle for Toffoli gates before ADDER_MOD to put m*2^i to wires_a if control_wire == 1
             for j in range(len(wires_a)):
                 if m_2_to_power_i_mod_N[j] == "1":
                     decomp_ops += [qml.Toffoli(wires=[control_wire, wires_z[i], wires_a[j]])]
